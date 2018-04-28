@@ -4,7 +4,7 @@
  * @author Jeroen Peeters <contact@nos.io>
  */
 
-import nos from "./bindings";
+import * as nos from "./bindings";
 import props from "./props";
 
 export default nos;
