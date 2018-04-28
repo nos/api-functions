@@ -60,7 +60,9 @@ export const testInvoke = (scriptHash, operation, args, options) =>
  * @param {object} options options object with fallback function
  */
 export const invoke = (scriptHash, operation, args, options) =>
-  exists ? nos.invoke(scriptHash, operation, args) : options.fallback(scriptHash, operation, args);
+  exists
+    ? nos.invoke(scriptHash, operation, ...args)
+    : options.fallback(scriptHash, operation, ...args);
 
 /**
  * @function getStorage
