@@ -1,9 +1,3 @@
-/**
- * @nos/api-functions
- * API bindings (with fallback) and types for nOS dApps
- * @author Jeroen Peeters <contact@nos.io>
- */
-
 // General checks
 
 /** @const {boolean} exists check whether nOS is defined */

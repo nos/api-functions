@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export default (nosProps = PropTypes.shape({
+const nosProps = PropTypes.shape({
   exists: PropTypes.bool.isRequired,
   getAddress: PropTypes.func.isRequired,
   getBalance: PropTypes.func.isRequired,
@@ -9,4 +9,6 @@ export default (nosProps = PropTypes.shape({
   testInvoke: PropTypes.func.isRequired,
   invoke: PropTypes.func.isRequired,
   getStorage: PropTypes.func.isRequired
-}));
+});
+
+export default nosProps;
