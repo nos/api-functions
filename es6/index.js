@@ -5,7 +5,8 @@
  */
 
 import * as nos from "./bindings";
-import props from "./props";
+import { exists } from "./lib";
+import nosProps from "./props";
 
-export default nos;
-export const nosPropTypes = props;
+export default { exists, ...nos };
+export const react = { nosProps };
