@@ -4,9 +4,27 @@
  * @author Jeroen Peeters <contact@nos.io>
  */
 
-import * as nos from "./bindings";
+import {
+  claimGas,
+  getAddress,
+  getBalance,
+  getStorage,
+  invoke,
+  send,
+  testInvoke
+} from "./bindings";
 import { exists } from "./lib";
-import nosProps from "./props";
+import * as reactNamespace from "./react";
 
-export default { exists, ...nos };
-export const react = { nosProps };
+export default {
+  claimGas,
+  exists,
+  getAddress,
+  getBalance,
+  getStorage,
+  invoke,
+  send,
+  testInvoke
+};
+
+export const react = reactNamespace;
