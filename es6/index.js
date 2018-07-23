@@ -1,5 +1,5 @@
 /**
- * @nos/api-functions
+ * @nosplatform/api-functions
  * API bindings (with fallback) and types for nOS dApps
  * @author Jeroen Peeters <contact@nos.io>
  */
@@ -14,7 +14,6 @@ import {
   testInvoke
 } from "./bindings";
 import { exists } from "./lib";
-import * as reactNamespace from "./react";
 
 export default {
   claimGas,
@@ -26,5 +25,3 @@ export default {
   send,
   testInvoke
 };
-
-export const react = reactNamespace;

@@ -9,7 +9,7 @@ export const executor = (func, fallback, config) =>
   exists ? nos[func](config) : useFallback(fallback, config);
 
 /**
- * @function useFallback 
+ * @function useFallback
  * @param {function} fallback checks if fallback function exists, otherwise return nothing
  * @param {object} args potential arguments that are passed along
  */

@@ -14,3 +14,8 @@
 npm i --save @nosplatform/api-functions
 yarn add @nosplatform/api-functions
 ```
+
+## Usage in react
+```
+import { injectNOS, nosProps } from "@nosplatform/api-functions/react";
+```
