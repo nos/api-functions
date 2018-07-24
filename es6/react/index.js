@@ -1,4 +1,4 @@
 import nosProps from "./props";
-import { Consumer, injectNOS } from "./nosStore";
+import { injectNOS } from "./inject";
 
-export default { Consumer, injectNOS, nosProps };
+export { injectNOS, nosProps };
