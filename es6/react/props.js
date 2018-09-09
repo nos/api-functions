@@ -1,6 +1,6 @@
-import { func, shape } from "prop-types";
+import { func, string, shape, objectOf } from "prop-types";
 
-const nosProps = shape({
+export const nosProps = shape({
   getAddress: func.isRequired,
   getBalance: func.isRequired,
   claimGas: func.isRequired,
@@ -10,4 +10,4 @@ const nosProps = shape({
   getStorage: func.isRequired
 });
 
-export default nosProps;
+export const assetProps = objectOf(string);
