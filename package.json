@@ -30,15 +30,15 @@
   },
   "homepage": "https://github.com/nos/api-functions#readme",
   "dependencies": {
-    "prop-types": "15.6.1"
+    "prop-types": "15.6.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.46",
     "@babel/core": "^7.0.0-beta.46",
     "@babel/preset-env": "^7.0.0-beta.46",
     "@babel/preset-react": "^7.0.0-beta.47",
-    "react": ">=16.3.0",
-    "prettier": "^1.12.1"
+    "prettier": "^1.12.1",
+    "react": ">=16.3.0"
   },
   "prettier": {
     "printWidth": 100
