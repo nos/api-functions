@@ -23,11 +23,12 @@ package.
 ```js
 import React from 'react';
 import { compose } from 'recompose';
-import { injectNOS, injectAssets, nosProps } from "@nosplatform/api-functions/lib/react";
+import { injectNOS, injectAssets, nosProps, assetProps } from "@nosplatform/api-functions/lib/react";
 
 class ShowBalance extends React.Component {
   static propTypes = {
-    nos: nosProps.isRequired
+    nos: nosProps.isRequired,
+    assets: assetProps.isRequired
   }
 
   render() {
