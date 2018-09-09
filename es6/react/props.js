@@ -1,14 +1,13 @@
-import PropTypes from "prop-types";
+import { func, shape } from "prop-types";
 
-const nosProps = PropTypes.shape({
-  exists: PropTypes.bool.isRequired,
-  getAddress: PropTypes.func.isRequired,
-  getBalance: PropTypes.func.isRequired,
-  claimGas: PropTypes.func.isRequired,
-  send: PropTypes.func.isRequired,
-  testInvoke: PropTypes.func.isRequired,
-  invoke: PropTypes.func.isRequired,
-  getStorage: PropTypes.func.isRequired
+const nosProps = shape({
+  getAddress: func.isRequired,
+  getBalance: func.isRequired,
+  claimGas: func.isRequired,
+  send: func.isRequired,
+  testInvoke: func.isRequired,
+  invoke: func.isRequired,
+  getStorage: func.isRequired
 });
 
 export default nosProps;

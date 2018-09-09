@@ -4,24 +4,7 @@
  * @author Jeroen Peeters <contact@nos.io>
  */
 
-import {
-  claimGas,
-  getAddress,
-  getBalance,
-  getStorage,
-  invoke,
-  send,
-  testInvoke
-} from "./bindings";
-import { exists } from "./lib";
+import assets from "./assets";
+import nos from "./nos";
 
-export default {
-  claimGas,
-  exists,
-  getAddress,
-  getBalance,
-  getStorage,
-  invoke,
-  send,
-  testInvoke
-};
+export { assets, nos };

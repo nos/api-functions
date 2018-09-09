@@ -1,9 +1,11 @@
 import React from "react";
 
-import nos from "../";
+import { nos, assets } from "../";
 
-const injectNOS = Component => props => (
-  <Component nos={nos} {...props} />
+export const injectNOS = Component => props => (
+  <Component {...props} nos={nos} />
 );
 
-export { injectNOS };
+export const injectAssets = Component => props => (
+  <Component {...props} assets={assets} />
+);
