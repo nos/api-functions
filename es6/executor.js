@@ -1,5 +1,4 @@
-/** @const {boolean} exists check whether nOS is defined */
-const exists = !!window.NOS && !!window.NOS.V1;
+import exists from "./exists";
 
 /** @const {object} nos bind nOS api to variable */
 const nos = exists ? window.NOS.V1 : undefined;

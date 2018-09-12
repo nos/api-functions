@@ -1,5 +1,4 @@
-/** @const {boolean} exists check whether assets constant is defined */
-const exists = !!window.NOS && !!window.NOS.ASSETS;
+import exists from "./exists";
 
 /** @const {object} assets bind assets constant to variable */
 const assets = exists ? window.NOS.ASSETS : {

@@ -1,3 +1,4 @@
+import exists from "./exists";
 import executor from "./executor";
 
 // Wallet Actions
@@ -53,6 +54,7 @@ const getStorage = (config, fallback) => executor('getStorage', fallback, config
 
 const nos = {
   claimGas,
+  exists,
   getAddress,
   getBalance,
   getStorage,

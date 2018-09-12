@@ -1,6 +1,7 @@
 import { func, string, shape, objectOf } from "prop-types";
 
 export const nosProps = shape({
+  exists: bool.isRequired,
   getAddress: func.isRequired,
   getBalance: func.isRequired,
   claimGas: func.isRequired,
