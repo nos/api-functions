@@ -21,7 +21,7 @@ const getBalance = (config, fallback) => executor("getBalance", fallback, config
  * @param {object} config All possible arguments and flags are passed as childs of this object
  * @param {function} fallback fallback function if outside of nOS browser
  */
-const getLastBlock = (config, fallback) => executor("getLastBlock", fallback, config);
+const getLastBlock = fallback => executor("getLastBlock", fallback);
 
 /**
  * @function claimGas
