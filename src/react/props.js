@@ -4,6 +4,7 @@ export const nosProps = shape({
   exists: bool.isRequired,
   getAddress: func.isRequired,
   getBalance: func.isRequired,
+  getLastBlock: func.isRequired,
   claimGas: func.isRequired,
   send: func.isRequired,
   testInvoke: func.isRequired,
