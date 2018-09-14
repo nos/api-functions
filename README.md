@@ -16,6 +16,48 @@ yarn add @nosplatform/api-functions
 ```
 
 ## Usage in react
+Wrap your component with the higher-order components to provide fallbacks when running outside the
+context of the [nOS client](https://github.com/nos/client).  Specify `propTypes` provided by this
+package.
+
+```js
+import React from 'react';
+import { compose } from 'recompose';
+import { injectNOS, injectAssets, nosProps, assetProps } from "@nosplatform/api-functions/lib/react";
+
+class ShowBalance extends React.Component {
+  static propTypes = {
+    nos: nosProps.isRequired,
+    assets: assetProps.isRequired
+  }
+
+  render() {
+    return (
+      <button type="button" onClick={this.handleClick}>
+        Show NEO Balance
+      </button>
+    );
+  }
+
+  async handleClick = () => {
+    const { nos, assets } = this.props;
+    const balance = await nos.getBalance({ asset: assets.NEO });
+    console.log('NEO Balance:', balance);
+  }
+};
+
+export default compose(
+  injectNOS,
+  injectAssets
+)(ShowBalance);
 ```
-import { injectNOS, nosProps } from "@nosplatform/api-functions/lib/react";
+
+In addition to automatically providing the NOS API function as a prop to your React component, the
+api-functions package also provides the opportunity to specify a fallback implementation.  This is
+especially useful for building in the context of another browser if not wanting to use the nOS
+client for any reason.
+
+```js
+const balance = await nos.getBalance({ asset: assets.NEO }, () => '23');
+console.log('NEO Balance:', balance);  // NEO Balance: 23
 ```

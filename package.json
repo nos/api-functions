@@ -1,11 +1,12 @@
 {
   "name": "@nosplatform/api-functions",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "nOS API bindings and types",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf lib && ./node_modules/.bin/babel es6 -d lib"
+    "clean": "rm -rf lib",
+    "build": "yarn run clean && ./node_modules/.bin/babel src -d lib"
   },
   "repository": {
     "type": "git",
@@ -30,15 +31,15 @@
   },
   "homepage": "https://github.com/nos/api-functions#readme",
   "dependencies": {
-    "prop-types": "15.6.1"
+    "prop-types": "15.6.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.46",
     "@babel/core": "^7.0.0-beta.46",
     "@babel/preset-env": "^7.0.0-beta.46",
     "@babel/preset-react": "^7.0.0-beta.47",
-    "react": ">=16.3.0",
-    "prettier": "^1.12.1"
+    "prettier": "^1.12.1",
+    "react": ">=16.3.0"
   },
   "prettier": {
     "printWidth": 100
