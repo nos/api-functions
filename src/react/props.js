@@ -1,4 +1,4 @@
-import { func, string, shape, objectOf } from "prop-types";
+import { bool, func, string, shape, objectOf } from "prop-types";
 
 export const nosProps = shape({
   exists: bool.isRequired,
