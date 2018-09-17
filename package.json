@@ -1,6 +1,6 @@
 {
   "name": "@nosplatform/api-functions",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "nOS API bindings and types",
   "main": "lib/index.js",
   "scripts": {
