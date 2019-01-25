@@ -1,5 +1,24 @@
 {
-  "extends": [
-    "config:base"
+  "extends": ["config:base"],
+  "schedule": ["on monday"],
+  "labels": ["Renovate 🌴"],
+  "automerge": true,
+  "major": {
+    "automerge": false
+  }
+  "statusCheckVerify": true,
+  "packageRules": [
+    {
+      "packagePatterns": ["eslint", "stylelint"],
+      "groupName": "lint"
+    },
+    {
+      "packagePatterns": ["babel"],
+      "groupName": "babel"
+    },
+    {
+      "packagePatterns": ["enzyme"],
+      "groupName": "enzyme"
+    }
   ]
 }
