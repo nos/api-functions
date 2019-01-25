@@ -9,7 +9,10 @@ export const nosProps = shape({
   send: func.isRequired,
   testInvoke: func.isRequired,
   invoke: func.isRequired,
-  getStorage: func.isRequired
+  getStorage: func.isRequired,
+  getPublicKey: func.isRequired,
+  encrypt: func.isRequired,
+  decrypt: func.isRequired
 });
 
 export const assetProps = objectOf(string);

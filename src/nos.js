@@ -59,6 +59,28 @@ const invoke = (config, fallback) => executor("invoke", fallback, config);
  */
 const getStorage = (config, fallback) => executor("getStorage", fallback, config);
 
+/**
+ * @function getPublicKey
+ * @param {object} config All possible arguments and flags are passed as childs of this object
+ * @param {function} fallback fallback function if outside of nOS browser
+ */
+const getPublicKey = (config, fallback) => executor("getPublicKey", fallback, config);
+
+/**
+ * @function encrypt
+ * @param {object} config All possible arguments and flags are passed as childs of this object
+ * @param {function} fallback fallback function if outside of nOS browser
+ */
+const encrypt = (config, fallback) => executor("encrypt", fallback, config);
+
+/**
+ * @function decrypt
+ * @param {object} config All possible arguments and flags are passed as childs of this object
+ * @param {function} fallback fallback function if outside of nOS browser
+ */
+const decrypt = (config, fallback) => executor("decrypt", fallback, config);
+
+
 const nos = {
   claimGas,
   exists,
@@ -68,7 +90,10 @@ const nos = {
   getStorage,
   invoke,
   send,
-  testInvoke
+  testInvoke,
+  getPublicKey,
+  encrypt,
+  decrypt
 };
 
 export default nos;
