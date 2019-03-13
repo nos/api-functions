@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "declarationDir": "./lib",
+        "module": "es6",
+        "noImplicitAny": true,
+        "outDir": "./lib",
+        "target": "es5",
+        "allowJs": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

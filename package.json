@@ -3,6 +3,11 @@
   "version": "0.4.2",
   "description": "nOS API bindings and types",
   "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "files": [
+    "lib"
+  ],
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf lib",
@@ -40,7 +45,11 @@
     "@babel/preset-react": "7.0.0",
     "prettier": "1.16.4",
     "react": "16.8.4",
-    "rimraf": "2.6.3"
+    "rimraf": "2.6.3",
+    "rollup": "^1.6.0",
+    "rollup-plugin-typescript2": "^0.20.0",
+    "tslint": "^5.14.0",
+    "typescript": "^3.3.3333"
   },
   "prettier": {
     "printWidth": 100
