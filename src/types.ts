@@ -66,35 +66,35 @@ export interface IDecryptConfig extends IEncryptData {
 }
 
 // Functions
-export type getAddress = () => Address;
-export type getBalance = (config: IGetBalanceConfig) => string;
-export type getBlock = () => IGenericKeyValue;
-export type claimGas = () => TxId;
-export type testInvoke = (config: ITestInvokeConfig) => IGenericKeyValue;
-export type invoke = (config: IInvokeConfig) => TxId;
-export type getStorage = (config: IGetStorageConfig) => any;
-export type send = (config: ISendConfig) => TxId;
-export type getPublicKey = () => string;
-export type encrypt = () => IEncryptData;
-export type decrypt = (config: IDecryptConfig) => Buffer;
+export type claimGas = () => Promise<TxId>;
+export type decrypt = (config: IDecryptConfig) => Promise<Buffer>;
+export type encrypt = (config: IEncryptConfig) => Promise<IEncryptData>;
+export type getAddress = () => Promise<Address>;
+export type getBalance = (config: IGetBalanceConfig) => Promise<string>;
+export type getLastBlock = () => Promise<IGenericKeyValue>;
+export type getPublicKey = () => Promise<string>;
+export type getStorage = (config: IGetStorageConfig) => Promise<any>;
+export type invoke = (config: IInvokeConfig) => Promise<TxId>;
+export type send = (config: ISendConfig) => Promise<TxId>;
+export type testInvoke = (config: ITestInvokeConfig) => Promise<IGenericKeyValue>;
 
 export interface INosNamespace {
   V1: {
+    claimGas: claimGas;
+    decrypt: decrypt;
+    encrypt: encrypt;
     getAddress: getAddress;
     getBalance: getBalance;
-    getBlock: getBlock;
-    claimGas: claimGas;
-    testInvoke: testInvoke;
-    invoke: invoke;
-    getStorage: getStorage;
-    send: send;
+    getBlock: getLastBlock;
     getPublicKey: getPublicKey;
-    encrypt: encrypt;
-    decrypt: decrypt;
+    getStorage: getStorage;
+    invoke: invoke;
+    send: send;
+    testInvoke: testInvoke;
   };
 
   ASSETS: {
-    NEO: string;
     GAS: string;
+    NEO: string;
   };
 }
