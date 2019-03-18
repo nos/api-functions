@@ -13,6 +13,7 @@ import {
   IGetBalanceConfig,
   IGetStorageConfig,
   IInvokeConfig,
+  InferredFunction,
   invoke,
   ISendConfig,
   ITestInvokeConfig,
@@ -24,55 +25,45 @@ import { NosWindow } from "./window";
 declare const window: NosWindow;
 const nos = window.NOS.V1;
 
-function withFallback<T, U>(fallback?: (config?: U) => T, config?: U) {
+function withFallback<T, U>(fallback?: (config?: U) => InferredFunction<T, U>, config?: U) {
   return fallback(config);
 }
 
 const ApiFunctions = {
   claimGas: (fallback?: claimGas) =>
-    exists ? nos.claimGas() : withFallback<ReturnType<claimGas>, undefined>(fallback),
+    exists ? nos.claimGas() : withFallback<claimGas, undefined>(fallback),
 
   decrypt: (config: IDecryptConfig, fallback?: decrypt) =>
-    exists
-      ? nos.decrypt(config)
-      : withFallback<ReturnType<decrypt>, IDecryptConfig>(fallback, config),
+    exists ? nos.decrypt(config) : withFallback<decrypt, IDecryptConfig>(fallback, config),
 
   encrypt: (config: IEncryptConfig, fallback?: encrypt) =>
-    exists
-      ? nos.encrypt(config)
-      : withFallback<ReturnType<encrypt>, IEncryptConfig>(fallback, config),
+    exists ? nos.encrypt(config) : withFallback<encrypt, IEncryptConfig>(fallback, config),
 
   exists,
 
   getAddress: (fallback?: getAddress) =>
-    exists ? nos.getAddress() : withFallback<ReturnType<getAddress>, undefined>(fallback),
+    exists ? nos.getAddress() : withFallback<getAddress, undefined>(fallback),
 
   getBalance: (config: IGetBalanceConfig, fallback?: getBalance) =>
-    exists
-      ? nos.getBalance(config)
-      : withFallback<ReturnType<getBalance>, IGetBalanceConfig>(fallback, config),
+    exists ? nos.getBalance(config) : withFallback<getBalance, IGetBalanceConfig>(fallback, config),
 
   getLastBlock: (fallback?: getLastBlock) =>
-    exists ? nos.getBlock() : withFallback<ReturnType<getLastBlock>, undefined>(fallback),
+    exists ? nos.getBlock() : withFallback<getLastBlock, undefined>(fallback),
 
   getPublicKey: (fallback?: getPublicKey) =>
-    exists ? nos.getPublicKey() : withFallback<ReturnType<getPublicKey>, undefined>(fallback),
+    exists ? nos.getPublicKey() : withFallback<getPublicKey, undefined>(fallback),
 
   getStorage: (config: IGetStorageConfig, fallback?: getStorage) =>
-    exists
-      ? nos.getStorage(config)
-      : withFallback<ReturnType<getStorage>, IGetStorageConfig>(fallback, config),
+    exists ? nos.getStorage(config) : withFallback<getStorage, IGetStorageConfig>(fallback, config),
 
   invoke: (config: IInvokeConfig, fallback?: invoke) =>
-    exists ? nos.invoke(config) : withFallback<ReturnType<invoke>, IInvokeConfig>(fallback, config),
+    exists ? nos.invoke(config) : withFallback<invoke, IInvokeConfig>(fallback, config),
 
   send: (config: ISendConfig, fallback?: send) =>
-    exists ? nos.send(config) : withFallback<ReturnType<send>, ISendConfig>(fallback, config),
+    exists ? nos.send(config) : withFallback<send, ISendConfig>(fallback, config),
 
   testInvoke: (config: ITestInvokeConfig, fallback?: testInvoke) =>
-    exists
-      ? nos.testInvoke(config)
-      : withFallback<ReturnType<testInvoke>, ITestInvokeConfig>(fallback, config)
+    exists ? nos.testInvoke(config) : withFallback<testInvoke, ITestInvokeConfig>(fallback, config)
 };
 
 export default ApiFunctions;

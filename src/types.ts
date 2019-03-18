@@ -1,4 +1,6 @@
 // Singular types
+export type InferredFunction<T, U> = T extends (config?: U) => infer R ? R : any;
+
 export interface IGenericKeyValue {
   [key: string]: any;
 }
