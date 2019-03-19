@@ -49,15 +49,11 @@ workflows:
           requires:
             - test
           filters:
-            tags:
-              only: /.*/
             branches:
-              ignore: /.*/
+              only: master
       - deploy:
           requires:
             - hold
           filters:
-            tags:
-              only: /.*/
             branches:
-              ignore: /.*/
+              only: master
