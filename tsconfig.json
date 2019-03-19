@@ -6,7 +6,8 @@
     "noImplicitAny": true,
     "outDir": "./lib",
     "target": "es5",
-    "jsx": "react"
+    "jsx": "react",
+    "moduleResolution": "node"
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]

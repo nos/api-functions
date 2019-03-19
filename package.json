@@ -1,17 +1,18 @@
 {
   "name": "@nosplatform/api-functions",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "nOS API bindings and types",
   "main": "lib/index.js",
   "module": "lib/index.es.js",
   "files": [
-    "lib"
+    "lib",
+    "src"
   ],
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "clean": "rimraf lib",
-    "build": "yarn run clean && ./node_modules/.bin/babel src -d lib"
+    "build": "yarn run clean && tsc"
   },
   "repository": {
     "type": "git",
@@ -40,12 +41,17 @@
     "prop-types": "15.7.2"
   },
   "devDependencies": {
+    "@types/jest": "24.0.11",
     "@types/react": "16.8.8",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "1.11.2",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "24.5.0",
     "prettier": "1.16.4",
     "react": "16.8.4",
+    "react-dom": "^16.8.4",
     "rimraf": "2.6.3",
-    "rollup": "1.6.0",
-    "rollup-plugin-typescript2": "0.20.0",
+    "ts-jest": "24.0.0",
     "tslint": "5.14.0",
     "tslint-config-prettier": "1.18.0",
     "tslint-plugin-prettier": "2.0.1",
@@ -53,8 +59,5 @@
   },
   "prettier": {
     "printWidth": 100
-  },
-  "directories": {
-    "lib": "lib"
   }
 }
