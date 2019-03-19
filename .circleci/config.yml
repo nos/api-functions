@@ -37,7 +37,7 @@ jobs:
             - v1-dependencies-
       - run: yarn build
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_API" > ~/repo/.npmrc
-      - run: npm publish
+      - run: npm publish --access public
 
 workflows:
   version: 2
