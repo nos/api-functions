@@ -23,7 +23,7 @@ import {
 import { NosWindow } from "./window";
 
 declare const window: NosWindow;
-const nos = window.NOS.V1;
+const nos = exists ? window.NOS.V1 : undefined;
 
 function withFallback<T, U>(fallback?: (config?: U) => InferredFunction<T, U>, config?: U) {
   return fallback(config);
@@ -48,7 +48,7 @@ const ApiFunctions = {
     exists ? nos.getBalance(config) : withFallback<getBalance, IGetBalanceConfig>(fallback, config),
 
   getLastBlock: (fallback?: getLastBlock) =>
-    exists ? nos.getBlock() : withFallback<getLastBlock, undefined>(fallback),
+    exists ? nos.getLastBlock() : withFallback<getLastBlock, undefined>(fallback),
 
   getPublicKey: (fallback?: getPublicKey) =>
     exists ? nos.getPublicKey() : withFallback<getPublicKey, undefined>(fallback),

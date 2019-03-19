@@ -87,7 +87,7 @@ export interface INosNamespace {
     encrypt: encrypt;
     getAddress: getAddress;
     getBalance: getBalance;
-    getBlock: getLastBlock;
+    getLastBlock: getLastBlock;
     getPublicKey: getPublicKey;
     getStorage: getStorage;
     invoke: invoke;

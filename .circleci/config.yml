@@ -3,8 +3,7 @@
 version: 2
 
 references:
-  workspace: &workspace
-    ~/repo
+  workspace: &workspace ~/repo
 
   container_config: &container_config
     docker:
@@ -17,17 +16,15 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
-      - run: sudo yarn global add yarn@1.7.0 greenkeeper-lockfile@1
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run: sudo yarn global add yarn@1.7.0
       - run: yarn install
       - run: yarn build
-      - run: greenkeeper-lockfile-update
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run: greenkeeper-lockfile-upload
   test:
     <<: *container_config
     steps:
@@ -35,9 +32,9 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
       - run: sudo apt-get -y update
       - run: sudo apt-get -y install libgtk-3-0 libxss1 libgconf-2-4 libnss3 libasound2
       - run: sudo yarn global add yarn@1.7.0
