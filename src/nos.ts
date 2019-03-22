@@ -59,6 +59,12 @@ const ApiFunctions = {
   invoke: (config: IInvokeConfig, fallback?: invoke) =>
     exists ? nos.invoke(config) : withFallback<invoke, IInvokeConfig>(fallback, config),
 
+  off: exists ? nos.off : undefined,
+
+  on: exists ? nos.on : undefined,
+
+  once: exists ? nos.once : undefined,
+
   send: (config: ISendConfig, fallback?: send) =>
     exists ? nos.send(config) : withFallback<send, ISendConfig>(fallback, config),
 

@@ -15,6 +15,7 @@ export interface IEncryptData {
 export type Address = string;
 export type ScriptHash = string;
 export type TxId = string;
+export type EventType = "block"; // will be expanded upon in the future.
 
 // Configs
 export interface IGetBalanceConfig {
@@ -79,6 +80,9 @@ export type getStorage = (config: IGetStorageConfig) => Promise<any>;
 export type invoke = (config: IInvokeConfig) => Promise<TxId>;
 export type send = (config: ISendConfig) => Promise<TxId>;
 export type testInvoke = (config: ITestInvokeConfig) => Promise<IGenericKeyValue>;
+export type on = (event: EventType, callback: (...args: any[]) => void) => void;
+export type once = (event: EventType, callback: (...args: any[]) => void) => void;
+export type off = (event: EventType, subscription: on) => void;
 
 export interface INosNamespace {
   V1: {
@@ -91,6 +95,9 @@ export interface INosNamespace {
     getPublicKey: getPublicKey;
     getStorage: getStorage;
     invoke: invoke;
+    off: off;
+    on: on;
+    once: once;
     send: send;
     testInvoke: testInvoke;
   };
