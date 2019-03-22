@@ -20,6 +20,7 @@ jobs:
             - v1-dependencies-
       - run: yarn install
       - run: yarn test
+      - run: yarn codecov
       - save_cache:
           paths:
             - node_modules
