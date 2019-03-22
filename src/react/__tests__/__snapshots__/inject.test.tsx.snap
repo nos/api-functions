@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NosX should add assets to the wrapped component's props 1`] = `
+<MyWrappedComponent>
+  <Component>
+    <MyComponent
+      assets={
+        Object {
+          "GAS": "602c79718b16e442de58778e148d0b1084e3b2dffd5de6b7b16cee7969282de7",
+          "NEO": "c56f33fc6ecfcd0c225c4ab356fee59390af8560be0e930faebe74a6daff7c9b",
+        }
+      }
+    >
+      <div />
+    </MyComponent>
+  </Component>
+</MyWrappedComponent>
+`;
+
+exports[`NosX should add nos via render props 1`] = `
+<MyWrappedComponent>
+  <Component>
+    <MyComponent
+      nos={
+        Object {
+          "claimGas": [Function],
+          "decrypt": [Function],
+          "encrypt": [Function],
+          "exists": false,
+          "getAddress": [Function],
+          "getBalance": [Function],
+          "getLastBlock": [Function],
+          "getPublicKey": [Function],
+          "getStorage": [Function],
+          "invoke": [Function],
+          "off": undefined,
+          "on": undefined,
+          "once": undefined,
+          "send": [Function],
+          "testInvoke": [Function],
+        }
+      }
+    >
+      <div />
+    </MyComponent>
+  </Component>
+</MyWrappedComponent>
+`;
+
+exports[`inject should add assets to the wrapped component's props 1`] = `
+<Component>
+  <MyComponent
+    assets={
+      Object {
+        "GAS": "602c79718b16e442de58778e148d0b1084e3b2dffd5de6b7b16cee7969282de7",
+        "NEO": "c56f33fc6ecfcd0c225c4ab356fee59390af8560be0e930faebe74a6daff7c9b",
+      }
+    }
+  >
+    <div />
+  </MyComponent>
+</Component>
+`;
+
+exports[`inject should add nos to the wrapped component's props 1`] = `
+<Component>
+  <MyComponent
+    nos={
+      Object {
+        "claimGas": [Function],
+        "decrypt": [Function],
+        "encrypt": [Function],
+        "exists": false,
+        "getAddress": [Function],
+        "getBalance": [Function],
+        "getLastBlock": [Function],
+        "getPublicKey": [Function],
+        "getStorage": [Function],
+        "invoke": [Function],
+        "off": undefined,
+        "on": undefined,
+        "once": undefined,
+        "send": [Function],
+        "testInvoke": [Function],
+      }
+    }
+  >
+    <div />
+  </MyComponent>
+</Component>
+`;

@@ -1,4 +1,14 @@
-import { injectAssets, injectNOS } from "./inject";
+import { useAssets, useNOS } from "./hooks";
+import { injectAssets, injectNOS, NosAssets, NosFunctions } from "./inject";
 import { assetProps, nosProps } from "./props";
 
-export { injectAssets, injectNOS, assetProps, nosProps };
+export {
+  assetProps,
+  injectAssets,
+  injectNOS,
+  NosAssets,
+  NosFunctions,
+  nosProps,
+  useAssets,
+  useNOS
+};

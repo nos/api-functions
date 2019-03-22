@@ -11,5 +11,8 @@ module.exports = {
   globals: {
     window: true
   },
-  collectCoverage: true
+  collectCoverage: true,
+  setupFiles: [
+    "./testsetup.js"
+  ],
 };

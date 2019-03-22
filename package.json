@@ -1,6 +1,6 @@
 {
   "name": "@nosplatform/api-functions",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "nOS API bindings and types",
   "main": "lib/index.js",
   "module": "lib/index.es.js",
@@ -41,6 +41,7 @@
     "prop-types": "15.7.2"
   },
   "devDependencies": {
+    "@types/enzyme": "3.9.1",
     "@types/jest": "24.0.11",
     "@types/react": "16.8.8",
     "codecov": "3.2.0",
