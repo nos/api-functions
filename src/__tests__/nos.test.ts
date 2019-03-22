@@ -12,6 +12,9 @@ const MockedNos = {
   getPublicKey: jest.fn(),
   getStorage: jest.fn(),
   invoke: jest.fn(),
+  off: jest.fn(),
+  on: jest.fn(),
+  once: jest.fn(),
   send: jest.fn(),
   testInvoke: jest.fn()
 };
@@ -64,6 +67,10 @@ describe("assets", () => {
     expect(MockedNos.invoke).toBeCalled();
     expect(MockedNos.send).toBeCalled();
     expect(MockedNos.testInvoke).toBeCalled();
+
+    expect(nos.off).not.toBeUndefined();
+    expect(nos.on).not.toBeUndefined();
+    expect(nos.once).not.toBeUndefined();
   });
 
   it("should use fallback function", () => {
@@ -84,5 +91,8 @@ describe("assets", () => {
     nos.testInvoke(genericConfig, mockFunc);
 
     expect(mockFunc).toBeCalled();
+    expect(nos.off).toBeUndefined();
+    expect(nos.on).toBeUndefined();
+    expect(nos.once).toBeUndefined();
   });
 });
