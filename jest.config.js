@@ -10,5 +10,6 @@ module.exports = {
   snapshotSerializers: ["enzyme-to-json/serializer"],
   globals: {
     window: true
-  }
+  },
+  collectCoverage: true
 };

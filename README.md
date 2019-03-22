@@ -4,6 +4,11 @@
 
 <h1 align="center">@nosplatform/api-functions</h1>
 <p align="center">
+  <a href="https://codecov.io/gh/nos/api-functions">
+    <img src="https://codecov.io/gh/nos/api-functions/branch/master/graph/badge.svg" />
+  </a>
+</p>
+<p align="center">
   <strong>nOS</strong> API bindings and types
 </p>
 
