@@ -21,6 +21,7 @@
     }
   ],
   "assignees": ["jeroenptrs"],
+  "reviewers": ["jeroenptrs"],
   "schedule": ["after 10pm and before 5am on every weekday", "every weekend"],
   "timezone": "Europe/Brussels"
 }
