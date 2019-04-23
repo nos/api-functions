@@ -1,6 +1,5 @@
 {
   "extends": ["config:base"],
-  "schedule": ["on monday"],
   "labels": ["Renovate 🌴"],
   "automerge": true,
   "major": {
@@ -20,5 +19,8 @@
       "packagePatterns": ["enzyme"],
       "groupName": "enzyme"
     }
-  ]
+  ],
+  "assignees": ["jeroenptrs"],
+  "schedule": ["after 10pm and before 5am on every weekday", "every weekend"],
+  "timezone": "Europe/Brussels"
 }
