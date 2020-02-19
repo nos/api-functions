@@ -44,7 +44,7 @@
     "@types/enzyme": "3.10.3",
     "@types/jest": "24.0.18",
     "@types/react": "16.9.2",
-    "codecov": "3.5.0",
+    "codecov": "3.6.5",
     "enzyme": "3.10.0",
     "enzyme-adapter-react-16": "1.14.0",
     "enzyme-to-json": "3.4.0",
