@@ -41,13 +41,13 @@
     "prop-types": "15.7.2"
   },
   "devDependencies": {
-    "@types/enzyme": "3.10.3",
+    "@types/enzyme": "3.10.18",
     "@types/jest": "24.0.18",
     "@types/react": "16.9.2",
     "codecov": "3.5.0",
-    "enzyme": "3.10.0",
-    "enzyme-adapter-react-16": "1.14.0",
-    "enzyme-to-json": "3.4.0",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-react-16": "1.15.8",
+    "enzyme-to-json": "3.6.2",
     "jest": "24.9.0",
     "prettier": "1.18.2",
     "react": "16.9.0",
